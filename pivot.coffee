@@ -423,7 +423,7 @@ callWithJQuery ($) ->
                 tr.appendChild th
             th = document.createElement("th")
             th.className = "pvtAxisLabel"
-            th.textContent = c
+            th.textContent = opts.headers.cols[j]
             tr.appendChild th
             for own i, colKey of colKeys
                 x = spanSize(colKeys, parseInt(i), parseInt(j))
@@ -449,7 +449,7 @@ callWithJQuery ($) ->
             for own i, r of rowAttrs
                 th = document.createElement("th")
                 th.className = "pvtAxisLabel"
-                th.textContent = r
+                th.textContent = opts.headers.rows[j]
                 tr.appendChild th
             th = document.createElement("th")
             if colAttrs.length ==0
